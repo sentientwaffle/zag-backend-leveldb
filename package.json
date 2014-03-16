@@ -1,0 +1,27 @@
+{
+  "name": "zag-backend-leveldb",
+  "version": "0.0.0",
+  "author": "sentientwaffle",
+  "description": "leveldb backend for zag metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap $(find test -name '*.test.js' | sort)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sentientwaffle/zag-backend-leveldb.git"
+  },
+  "keywords": [
+    "zag",
+    "metrics",
+    "leveldb"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "level-party": "0.0.3"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8",
+    "level": "~0.18.0"
+  }
+}
