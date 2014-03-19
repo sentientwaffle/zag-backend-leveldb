@@ -1,6 +1,7 @@
-var level    = require('level-party')
-  , Stream   = require('stream')
-  , inherits = require('util').inherits
+var level      = require('level-party')
+  , Stream     = require('stream')
+  , inherits   = require('util').inherits
+  , reNotFound = /^Key not found/
 
 module.exports = LevelBackend
 
@@ -214,6 +215,9 @@ LevelBackend.prototype._track = function(op, key, callback) {
     , start  = Date.now()
   return function(err, value) {
     agent.histogram("timing|" + op + "|" + bucket, Date.now() - start)
+    if (err && reNotFound.test(err.message)) {
+      err = null
+    }
     if (err) {
       agent.counter("error|" + op + "|" + bucket)
     }

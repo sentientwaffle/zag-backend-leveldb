@@ -18,7 +18,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "level-party": "0.0.3"
+    "level-party": "~0.0.3"
   },
   "devDependencies": {
     "tap": "~0.4.8",
