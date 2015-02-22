@@ -1,6 +1,6 @@
 {
   "name": "zag-backend-leveldb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "sentientwaffle",
   "description": "leveldb backend for zag metrics",
   "main": "index.js",
